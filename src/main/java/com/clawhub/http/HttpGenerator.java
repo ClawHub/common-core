@@ -1,6 +1,7 @@
 package com.clawhub.http;
 
 import com.clawhub.log.LogType;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
@@ -30,7 +31,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.util.StringUtils;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
