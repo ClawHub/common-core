@@ -33,6 +33,15 @@ public class RedisTemplate {
     private IRedisClient redisClient;
 
     /**
+     * Gets redis client.
+     *
+     * @return the redis client
+     */
+    public IRedisClient getRedisClient() {
+        return redisClient;
+    }
+
+    /**
      * Init.
      */
     @PostConstruct

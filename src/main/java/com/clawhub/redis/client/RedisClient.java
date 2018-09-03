@@ -21,6 +21,7 @@ public class RedisClient implements IRedisClient {
      */
     private JedisPool jedisPool;
 
+
     /**
      * 构造函数
      *
@@ -36,6 +37,15 @@ public class RedisClient implements IRedisClient {
         int database = redisProperties.getDatabase();
         jedisPool = new JedisPool(poolConfig, host, port, connectionTimeout, soTimeout, password, database, null, false,
                 null, null, null);
+    }
+
+    /**
+     * Gets jedis pool.
+     *
+     * @return the jedis pool
+     */
+    public JedisPool getJedisPool() {
+        return jedisPool;
     }
 
     @Override

@@ -90,6 +90,15 @@ public class RedisClusterClient implements IRedisClient {
         jedisCluster = new JedisCluster(nodes, connectionTimeout, soTimeout, maxAttempts, password, poolConfig);
     }
 
+    /**
+     * Gets jedis cluster.
+     *
+     * @return the jedis cluster
+     */
+    public JedisCluster getJedisCluster() {
+        return jedisCluster;
+    }
+
     @Override
     public String set(String key, String value, String nxxx, String expx, long time) {
         return jedisCluster.set(key, value, nxxx, expx, time);
