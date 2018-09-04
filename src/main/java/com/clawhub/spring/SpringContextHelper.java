@@ -24,6 +24,7 @@ public class SpringContextHelper implements ApplicationContextAware {
      * @author LiZhiming <br>
      * @taskId <br>
      */
+    @Override
     public void setApplicationContext(ApplicationContext applicationContext) {
         SpringContextHelper.setAppCtx(applicationContext);
     }
