@@ -18,5 +18,14 @@ public class StatusParamConstant {
      */
     public static final String RESOURCE_TYPE_MENU = "menu";
 
+    /**
+     * RESULT_SUCC
+     */
+    public static final boolean RESULT_SUCC = true;
+
+    /**
+     * RESULT_ERROR
+     */
+    public static final boolean RESULT_ERROR = false;
 
 }

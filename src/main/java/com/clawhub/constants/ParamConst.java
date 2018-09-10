@@ -90,14 +90,6 @@ public class ParamConst {
      */
     public static final String SYS_SUCC = "sys.succ";
 
-    /**
-     * RESULT_SUCC
-     */
-    public static final int RESULT_SUCC = 1;
 
-    /**
-     * RESULT_ERROR
-     */
-    public static final int RESULT_ERROR = 0;
 
 }

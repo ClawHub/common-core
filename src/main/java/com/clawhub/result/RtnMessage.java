@@ -1,10 +1,10 @@
-package com.clawhub.util.json;
+package com.clawhub.result;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.clawhub.util.ResourceUtil;
 
 /**
- * <Description> 错误信息封装< <br>
+ * <Description> 信息封装< <br>
  *
  * @author LiZhiming<br>
  * @version 1.0<br>
@@ -31,7 +31,6 @@ public class RtnMessage {
      * @param msgCode the msg code
      */
     public RtnMessage(String msgCode) {
-        super();
         this.msgCode = msgCode;
         this.msgText = ResourceUtil.getMessage(msgCode);
     }
@@ -43,7 +42,6 @@ public class RtnMessage {
      * @param msgText the msg text
      */
     public RtnMessage(String msgCode, String msgText) {
-        super();
         this.msgCode = msgCode;
         this.msgText = msgText;
     }
@@ -55,7 +53,6 @@ public class RtnMessage {
      * @param obj     the obj
      */
     public RtnMessage(String msgCode, Object... obj) {
-        super();
         this.msgCode = msgCode;
         this.msgText = ResourceUtil.getMessage(msgCode, obj);
     }
