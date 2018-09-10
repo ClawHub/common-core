@@ -24,7 +24,8 @@ public class ResultUtil {
      * @taskId <br>
      */
     public static String getSucc(Object obj, String messageCode) {
-        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode), obj), SerializerFeature.WRITE_MAP_NULL_FEATURES);
+        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode), obj),
+                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
     }
 
     /**
@@ -38,7 +39,8 @@ public class ResultUtil {
      * @taskId <br>
      */
     public static String getSucc(Object obj, String messageCode, Object... msg) {
-        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode, msg), obj), SerializerFeature.WRITE_MAP_NULL_FEATURES);
+        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode, msg), obj),
+                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
     }
 
     /**
@@ -47,7 +49,8 @@ public class ResultUtil {
      * @return the succ
      */
     public static String getSucc() {
-        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage("1000")), SerializerFeature.WRITE_MAP_NULL_FEATURES);
+        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage("1000")),
+                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
 
     }
 
@@ -60,7 +63,8 @@ public class ResultUtil {
      * @taskId <br>
      */
     public static String getSucc(String messageCode) {
-        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode)), SerializerFeature.WRITE_MAP_NULL_FEATURES);
+        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode)),
+                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
     }
 
     /**
@@ -73,7 +77,8 @@ public class ResultUtil {
      * @taskId <br>
      */
     public static String getSucc(String messageCode, Object... msg) {
-        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode, msg)), SerializerFeature.WRITE_MAP_NULL_FEATURES);
+        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode, msg)),
+                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
     }
 
     /**
@@ -85,7 +90,8 @@ public class ResultUtil {
      * @taskId <br>
      */
     public static String getError(String errorCode) {
-        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_ERROR, new RtnMessage(errorCode)), SerializerFeature.WRITE_MAP_NULL_FEATURES);
+        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_ERROR, new RtnMessage(errorCode)),
+                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
     }
 
     /**
@@ -96,6 +102,7 @@ public class ResultUtil {
      * @return the error
      */
     public static String getError(String errorCode, String msgText) {
-        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_ERROR, new RtnMessage(errorCode, msgText)), SerializerFeature.WRITE_MAP_NULL_FEATURES);
+        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_ERROR, new RtnMessage(errorCode, msgText)),
+                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
     }
 }
