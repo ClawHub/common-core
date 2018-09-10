@@ -8,7 +8,7 @@ package com.clawhub.constants;
  * @taskId <br>
  * @CreateDate 2018/9/8 <br>
  */
-public class StatusParamConstant {
+public class StatusConstant {
     /**
      * 按钮
      */
