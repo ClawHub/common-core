@@ -25,4 +25,24 @@ public class ParamConstant {
      * message
      */
     public static final String MESSAGE = "message";
+
+    /**
+     * pageNumber
+     */
+    public static final String PAGE_NUMBER = "pageNumber";
+
+    /**
+     * pageSize
+     */
+    public static final String PAGE_SIZE = "pageSize";
+
+    /**
+     * pageTotal
+     */
+    public static final String PAGE_TOTAL = "pageTotal";
+
+    /**
+     * pageRows
+     */
+    public static final String PAGE_ROWS = "pageRows";
 }

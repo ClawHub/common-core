@@ -33,9 +33,8 @@ public class ExceptionHandle {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public String exceptionGet(Exception e) {
-        logger.debug("异常类型：" + e.getClass());
-        String msg = e.getMessage();
-        logger.info("异常信息：" + msg);
+        logger.info("异常类型：" + e.getClass());
+        logger.info("异常信息：" + e);
         //返回系统异常
         return ResultUtil.getError("2000");
     }

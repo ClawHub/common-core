@@ -28,4 +28,24 @@ public class StatusConstant {
      */
     public static final boolean RESULT_ERROR = false;
 
+    /**
+     * 删除状态
+     */
+    public static final String DELETED = "1";
+
+    /**
+     * 未删除状态
+     */
+    public static final String UN_DELETED = "0";
+
+    /**
+     * 锁定状态
+     */
+    public static final String LOCKED = "1";
+
+    /**
+     * 未锁定状态
+     */
+    public static final String UN_LOCKED = "0";
+
 }
