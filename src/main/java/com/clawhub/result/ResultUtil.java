@@ -44,6 +44,17 @@ public class ResultUtil {
     }
 
     /**
+     * 返回成功数据
+     *
+     * @param obj obj
+     * @return string
+     */
+    public static String getSucc(Object obj) {
+        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage("1000"), obj),
+                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
+    }
+
+    /**
      * Gets succ.
      *
      * @return the succ
@@ -54,18 +65,6 @@ public class ResultUtil {
 
     }
 
-    /**
-     * Description: 有正确码,返回信息 <br>
-     *
-     * @param messageCode message code
-     * @return string
-     * @author LiZhiming <br>
-     * @taskId <br>
-     */
-    public static String getSucc(String messageCode) {
-        return JSONObject.toJSONString(new ResultInfo<>(StatusConstant.RESULT_SUCC, new RtnMessage(messageCode)),
-                SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty);
-    }
 
     /**
      * Description: 有正确码,带占位符信息<br>
